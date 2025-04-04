@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="logo1.png" alt="Parmanu Sakti Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
+            <div class="title">PARAMANU SHAKTI</div>
+        </div>
+        <a href="about.html" class="about-btn">About Us</a>
+    </header>
+
+    <main>
+        <div class="detection-section">
+            <h1>Fake News Detection</h1>
+            <h2>Write the news title to check the news is real or fake</h2>
+            <div class="input-group">
+                <input type="text" placeholder="Enter news title" id="news-title" required>
+                <button class="verify-btn">Verify</button>
+            </div>
+            <div class="result-section">
+                <h3>Result</h3>
+                <div id="result"></div>
+            </div>
+        </div>
+
+
+        <div class="news-section">
+            <h3>Latest News</h3>
+            <div class="slider-container">
+                <div class="slider-buttons">
+                    <button class="slider-btn" onclick="prevSlide()">←</button>
+                    <button class="slider-btn" onclick="nextSlide()">→</button>
+                </div>
+                <div class="slider">
+                    <div class="slide">
+                        <a href="https://www.hindustantimes.com/india-news/who-was-flight-lieutenant-siddharth-yadav-iaf-pilot-killed-in-jaguar-crash-got-engaged-10-days-ago-101743740863179.html"><img src="./News-images/top1news.jpg" alt="News 1">
+                        <div class="slide-description">
+                            <h4>Breaking News</h4>
+                            <p>Who was flight lieutenant Siddharth Yadav? IAF pilot killed in Jaguar crash got engaged 10 days ago</p></a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <a href="https://www.hindustantimes.com/business/your-favourite-iphone-model-could-get-costlier-by-43-because-of-donald-trumps-liberation-day-tariffs-101743728887344.html">
+                        <img src="./News-images/top2news.jpg" alt="News 2">
+                        <div class="slide-description">
+                            <h4>Breaking News</h4>
+                            <p>Your favourite Apple iPhones could get costlier by 43% due to Trump's 'Liberation Day' tariffs | Check details</p></a>
+                        
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <a href="https://www.hindustantimes.com/trending/passenger-bites-flight-attendant-during-heated-dispute-over-body-odour-delaying-flight-by-two-hours-101743747137348.html">
+                        <img src="./News-images/top3news.jpg" alt="News 3">
+                        <div class="slide-description">
+                            <h4>Breaking News</h4>
+                            <p>Passenger bites flight attendant during heated dispute over body odour, delaying flight by two hours</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="news-grid">
+            <a href="https://www.ndtv.com/world-news/virgin-atlantic-39-hours-and-counting-250-flying-from-london-to-mumbai-stranded-in-turkey-8083225" class="news-card">
+                <img src="./News-images/1stnews.webp" alt="News 4">
+                <div class="news-card-content">
+                    <!-- <h4>Featured News 1</h4> -->
+                    <p>40 Hours And Counting: 250 Flying From London To Mumbai Stranded In Turkey</p>
+                </div>
+            </a>
+            <a href="https://www.ndtv.com/india-news/veteran-actor-manoj-kumar-known-for-roles-in-purab-aur-paschim-kranti-dies-at-87-in-mumbai-8082750" class="news-card">
+                <img src="./News-images/2ndnews.jpeg" alt="News 5">
+                <div class="news-card-content">
+                    <!-- <h4>Featured News 2</h4> -->
+                    <p>Veteran Bollywood Actor Manoj Kumar Dies At 87 In Mumbai</p>
+                </div>
+            </a>
+            <a href="https://www.ndtv.com/india-news/waqf-amendment-bill-passed-by-rajya-sabha-with-128-votes-for-95-against-day-after-lok-sabha-cleared-it-8081809" class="news-card">
+                <img src="./News-images/3rdnews.png" alt="News 6">
+                <div class="news-card-content">
+                    <!-- <h4>Featured News 3</h4> -->
+                    <p>Waqf Bill Passed By Rajya Sabha With 128 Votes For, 95 Against</p>
+                </div>
+            </a>
+            <a href="https://www.ndtv.com/world-news/wall-street-leads-markets-bloodbath-trump-says-its-going-to-be-amazing-8082648" class="news-card">
+                <img src="./News-images/4thnews.png" alt="News 7">
+                <div class="news-card-content">
+                    <!-- <h4>Featured News 4</h4> -->
+                    <p>Wall Street Leads Markets Bloodbath, Trump Says, "It's Going To Be Amazing"</p>
+                </div>
+            </a>
+            <a href="https://www.livemint.com/market/stock-market-news/hdfc-bank-share-price-jumps-despite-indian-stock-market-fall-heres-why-11743739070414.html" class="news-card">
+                <img src="./News-images/5thnews.avif" alt="News 8">
+                <div class="news-card-content">
+                    <!-- <h4>Featured News 5</h4> -->
+                    <p>HDFC Bank share price jumps despite Indian stock market fall. Here’s why</p>
+                </div>
+            </a>
+            <a href="https://www.livemint.com/market/stock-market-news/global-markets-today-us-stock-market-slumps-s-p-500-sheds-2-4-trillion-as-trumps-tariffs-raise-recession-fears-11743728054031.html" class="news-card">
+                <img src="./News-images/6thnews.webp" alt="News 9">
+                <div class="news-card-content">
+                    <!-- <h4>Featured News 6</h4> -->
+                    <p>Global markets today: US stock market crashes; S&P 500 sheds $2.4 trillion as Trump’s tariffs stoke recession fears</p>
+                </div>
+            </a>
+            <a href="https://www.indiatoday.in/technology/news/story/samsung-galaxy-s25-edge-launch-date-leaked-and-it-seems-quite-accurate-2703797-2025-04-04" class="news-card">
+                <img src="./News-images/7thnews.avif" alt="News 10">
+                <div class="news-card-content">
+                    <!-- <h4>Featured News 7</h4> -->
+                    <p>Samsung Galaxy S25 Edge launch date leaked and it seems quite accurate</p>
+                </div>
+            </a>
+            <a href="https://indianexpress.com/article/sports/ipl/srh-vs-kkr-eden-gardens-venkatesh-iyer-ajinkya-rahane-vaibhav-arora-9923450/?ref=newlist_hp" class="news-card">
+                <img src="./News-images/8thnews.jpg" alt="News 11">
+                <div class="news-card-content">
+                    <!-- <h4>Featured News 8</h4> -->
+                    <p>IPL 2025: How clinical Kolkata Knight Riders dismantled the struggling Sunrisers Hyderabad</p>
+                </div>
+            </a>
+            <a href="https://indianexpress.com/article/business/donald-trump-retaliatory-tariff-apples-india-story-9921623/?ref=newlist_hp" class="news-card">
+                <img src="./News-images/9thnews.avif" alt="News 12">
+                <div class="news-card-content">
+                    <!-- <h4>Featured News 9</h4> -->
+                    <p>Where does Trump’s retaliatory tariff move leave Apple’s ‘make in India’ story?</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-left">
+            <!-- <div class="logo">
+                <img src="logo.png" alt="Parmanu Sakti Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div> -->
+            <div class="title">PARAMANU SHAKTI</div>
+        </div>
+        <div class="footer-right">
+            <a href="mailto:contact@paramanusakti.com"> <i class="fa-solid fa-square-envelope"></i> Gmail</a>
+            <a href="https://github.com/NotoriousArnav/hv25_t06-parmanu_shakti" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+    </footer>
+
+
+    <script>
+        let currentSlide = 0;
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlider();
+        }
+
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+
+        // Auto slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const headerLink = document.querySelector('.header-left a');
+        const footerLink = document.querySelector('.footer-left a');
+       
+        [headerLink, footerLink].forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+            });
+        });
+    });
